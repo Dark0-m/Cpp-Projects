@@ -75,11 +75,20 @@ int main(){
         std::cout << "1 : removeFile\n2 : renameFile\n3 : copyFile\n4 : createDirectory\n5 : Exit\n\n";
         std::cin >> input;
         switch(input){
-            case 1: removeFile();
-            case 2: rename();
-            case 3: copyFile();
-            case 4: createDirectory();
-            case 5: input = 5;
+            case 1:
+                removeFile();
+                break;
+            case 2:rename();
+                break;
+            case 3:
+                copyFile();
+                break;
+            case 4:
+                createDirectory();
+                break;
+            case 5:
+                input = 5;
+                break;
             
             default:
                 break;
