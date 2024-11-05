@@ -12,7 +12,7 @@ void createDirectory(){
         fs::create_directory("C:\\Users\\Khali\\Desktop\\" + name);
     }
     catch(fs::filesystem_error& e){
-        throw e.code();
+        std::cout << e.code() << '\n';
     }
 }
 
@@ -30,7 +30,7 @@ void rename(){
         fs::rename("C:\\Users\\Khali\\Desktop\\" + org, "C:\\Users\\Khali\\Desktop\\" + name);
     }
     catch(fs::filesystem_error& e){
-        throw e.code();
+        std::cout << e.code() << '\n'
     }
 }
 
@@ -47,8 +47,8 @@ void copyFile(){
     try{
         fs::copy_file("C:\\Users\\Khali\\Desktop\\" + org, "C:\\Users\\Khali\\Desktop\\" + copyTo, fs::copy_options::skip_existing);
     }
-        catch(fs::filesystem_error& e){
-        throw e.code();
+    catch(fs::filesystem_error& e){
+        std::cout << e.code() << '\n'
     }
 }
 
@@ -61,7 +61,7 @@ void removeFile(){
         fs::remove("C:\\Users\\Khali\\Desktop\\" + name);
     }
     catch(fs::filesystem_error& e){
-        throw e.code();
+        std::cout << e.code() << '\n'
     }
 }
 
